@@ -1,3 +1,7 @@
+:root {
+    --
+}
+
 /* remove default browser-enforced styles */
 * {
     margin: 0;
@@ -14,7 +18,7 @@ body {
 /* <header> STYLES START */
 header {
     padding: 20px 35px;
-    background-color: #88B497;
+    background-color: #e8f6dd;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -95,10 +99,31 @@ header nav ul a:hover {
     color: beige;
 }
 
-.content {
-    
+.contents {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.contents {
+.contents h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 17px;
+    color: darkolivegreen;
+    font-size: 40px;
+    border-right: 3px solid darkolivegreen;
+    line-height: 1.1;
+    margin-right: 35px;
+}
 
+#about p {
+    flex: 1;
+}
+
+.run-buddy-img img {
+    flex: 1;
+    justify-content: flex-start;
+    width: 50%;
 }
