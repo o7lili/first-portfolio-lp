@@ -6,27 +6,60 @@
     <title>Liliana's Portfolio</title>
 </head>
 <body>
-    <!-- navigation -->
+    <!-- header/nav -->
     <header>
-        <h1>Liliana Perez</h1>
+        <h1>
+            <a href="/">Liliana Perez</a>
+        </h1>
         <nav>
+            <!-- Unordered list element-->
             <ul>
+                <!-- List item element -->
                 <li><a href="#about">about</a></li>
                 <li><a href="#work">work</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
+
     <!-- hero -->
-    <section class="hero"></section>
-    <!-- content -->
-    <section class="content">
-        <!-- about section -->
-        <div></div>
-        <!-- work section -->
-        <div></div>
-        <!-- contact section -->
-        <div></div>
+    <section class="hero">
+        <h3 class="subtitle">UNC Coding Bootcamp Student</h3>
     </section>
+
+    <!-- content -->
+    <div class="content">
+        <!-- about section -->
+        <section id="about" class="contents">
+            <h2>about</h2>
+            <p>Aromatic, medium, wings, mazagran trifecta redeye single shot lungo bar. Black macchiato, sit, grinder single origin frappuccino decaffeinated chicory. Id crema, milk turkish mug decaffeinated spoon coffee. Black galão, white blue mountain breve sweet flavour. So qui wings, cortado froth cortado mocha single origin.</p>
+        </section>
+
+        <!-- work section -->
+        <section id="work" class="contents">
+            <h2>work</h2>
+            <div class="flex-container">
+                <div class="run-buddy-img">
+                    <img src="./assets/images/run-buddy.jpg" alt="" />
+                </div>
+                <div class="dummy-img-1">
+                    <img src="" alt="" />
+                </div>
+                <div class="dummy-img-2">
+                    <img src="" alt="" />
+                </div>    
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <section id="contact" class="contents">
+            <h2>contact</h2>
+            <ul>
+                <li>555.555.555</li>
+                <li>email@website.com</li>
+                <li><a src="https://github.com/o7lili">GitHub</a></li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>

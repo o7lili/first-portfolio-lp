@@ -1,0 +1,104 @@
+/* remove default browser-enforced styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* apply styles to <body> */
+body {
+    background-color: whitesmoke;
+}
+
+/* <header> STYLES START */
+header {
+    padding: 20px 35px;
+    background-color: #88B497;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    margin: 0;
+    padding: 15px 0 15px 0;
+}
+
+/* <header> h1 style */
+header h1 {
+    font-size: 45px;
+    color: beige;
+    background-color: darkolivegreen;
+}
+/* <header> a style */
+header a {
+    text-decoration: none;
+    color: beige;
+    background-color: darkolivegreen;
+    
+}
+
+/* <header> nav styles */
+header nav {
+    margin: 7px;
+    padding-right: 80px;
+}
+/* <header> nav and ul styles */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+/* <header> nav, ul, and li styles */
+header nav ul li a {
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: darkolivegreen;
+    background: linear-gradient(to top, darkolivegreen 50%, #88B497 50%);
+    background-size: 100% 200%;
+    background-position: top left;
+    transition: all .2s ease-out;
+    margin: 5px;
+    position: relative;
+    border-bottom: 3px solid darkolivegreen;
+}
+
+header nav ul a:hover {
+    color: beige;
+    background-position: bottom-left;
+}
+
+
+.hero {
+    background-image: url(../images/hero.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 400px;
+    margin-bottom: 25px;
+    background-position: bottom;
+    position: relative;
+}
+.subtitle {
+    position: absolute;
+    top: 85%;
+    left: 80%;
+    padding: 5px;
+    background-color: darkolivegreen;
+    color: beige;
+}
+
+.content {
+    
+}
+
+.contents {
+
+}
