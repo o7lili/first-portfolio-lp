@@ -17,13 +17,10 @@ body {
 
 /* <header> STYLES START */
 header {
-    padding: 20px 35px;
     background-color: #e8f6dd;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
     z-index: 9999;
     margin: 0;
@@ -35,13 +32,17 @@ header h1 {
     font-size: 45px;
     color: beige;
     background-color: darkolivegreen;
+    display: inline;
+    padding: 0 10px 0 60px;
 }
 /* <header> a style */
 header a {
     text-decoration: none;
     color: beige;
     background-color: darkolivegreen;
-    
+    position: absolute;
+    padding: 0 5px 0 25px;
+    bottom: 92%;
 }
 
 /* <header> nav styles */
@@ -85,11 +86,16 @@ header nav ul a:hover {
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: flex-start;
-    height: 400px;
+    height: 300px;
     margin-bottom: 25px;
     background-position: bottom;
     position: relative;
 }
+
+.hero img {
+    size: 50%;
+}
+
 .subtitle {
     position: absolute;
     top: 85%;
