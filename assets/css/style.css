@@ -1,5 +1,9 @@
 :root {
-    --
+    --background-color: whitesmoke;
+    --header-color: #e8f6dd;
+    --primary-color: beige;
+    --secondary-color: darkolivegreen;
+    --tertiary-color: #88B497;
 }
 
 /* remove default browser-enforced styles */
@@ -12,12 +16,12 @@
 
 /* apply styles to <body> */
 body {
-    background-color: whitesmoke;
+    background-color: var(--background-color);
 }
 
 /* <header> STYLES START */
 header {
-    background-color: #e8f6dd;
+    background-color: var(--header-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -30,16 +34,16 @@ header {
 /* <header> h1 style */
 header h1 {
     font-size: 45px;
-    color: beige;
-    background-color: darkolivegreen;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     display: inline;
     padding: 0 10px 0 60px;
 }
 /* <header> a style */
 header a {
     text-decoration: none;
-    color: beige;
-    background-color: darkolivegreen;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     position: absolute;
     padding: 0 5px 0 25px;
     bottom: 92%;
@@ -47,7 +51,7 @@ header a {
 
 /* <header> nav styles */
 header nav {
-    margin: 7px;
+    margin: 7px 0;
     padding-right: 80px;
 }
 /* <header> nav and ul styles */
@@ -63,18 +67,18 @@ header nav ul li a {
     padding: 5px;
     font-size: 25px;
     font-weight: bold;
-    color: darkolivegreen;
-    background: linear-gradient(to top, darkolivegreen 50%, #88B497 50%);
+    color: var(--secondary-color);
+    background: linear-gradient(to top, var(--secondary-color) 50%, var(--header-color) 50%);
     background-size: 100% 200%;
     background-position: top left;
     transition: all .2s ease-out;
     margin: 5px;
     position: relative;
-    border-bottom: 3px solid darkolivegreen;
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 header nav ul a:hover {
-    color: beige;
+    color: var(--header-color);
     background-position: bottom-left;
 }
 
@@ -101,11 +105,15 @@ header nav ul a:hover {
     top: 85%;
     left: 80%;
     padding: 5px;
-    background-color: darkolivegreen;
-    color: beige;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-.contents {
+section {
+    padding: 4%;
+}
+
+/* .contents {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 70%;
@@ -117,19 +125,83 @@ header nav ul a:hover {
     flex: 0 0 20%;
     text-align: right;
     padding-right: 17px;
-    color: darkolivegreen;
+    color: var(--secondary-color);
     font-size: 40px;
-    border-right: 3px solid darkolivegreen;
+    border-right: 3px solid var(--secondary-color);
     line-height: 1.1;
     margin-right: 35px;
 }
 
-#about p {
+.contents ul {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+} */
+
+#about {
+    display: flex;
+}
+
+h2 {
+    width: 175px;
+}
+
+.sub-header {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--secondary-color);
+    padding: 3%;
+    border-right: 5px solid var(--secondary-color);
+    text-align: right;
+}
+
+.content-text, .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.content-text p {
+    padding: 1%;
+    color: var(--secondary-color);
+    text-align: justify;
+    line-height: 1.25;
+}
+
+.flex-container {
     flex: 1;
 }
 
-.run-buddy-img img {
+img {
+    border: solid 10px;
+    margin: 1%;
+    opacity: 0.85;
+}
+
+#work {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.run-buddy {
+    flex: 1;
+}
+
+.main-work img {
     flex: 1;
     justify-content: flex-start;
     width: 50%;
+}
+
+.other-work {
+    flex: 1;
+}
+
+.horiseon img {
+    width: 640px;
+    height: 480px;
 }
