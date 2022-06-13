@@ -29,6 +29,7 @@ header {
     z-index: 9999;
     margin: 0;
     padding: 15px 0 15px 0;
+    align-items: center;
 }
 
 /* <header> h1 style */
@@ -36,17 +37,28 @@ header h1 {
     font-size: 45px;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    display: inline;
+    display: flex;
     padding: 0 10px 0 60px;
 }
-/* <header> a style */
+/* <header> a style, credit: Jeff Starr https://wp-mix.com/css-hover-link-slide-up-background/ */
 header a {
     text-decoration: none;
+    position: relative;
+    display: flex;
+    padding: 5px;
+    color: var(--secondary-color);
+    background-color: var(--header-color);
+    vertical-align: bottom;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    background-size: 100% 200%;
+    background-position: 0 -100%;
+    background-image: linear-gradient(to top, transparent 50%, var(--secondary-color) 50%);
+}
+
+header a:hover {
     color: var(--primary-color);
-    background-color: var(--secondary-color);
-    position: absolute;
-    padding: 0 5px 0 25px;
-    bottom: 92%;
+    background-position: 0 0;
 }
 
 /* <header> nav styles */
@@ -64,23 +76,11 @@ header nav ul {
 }
 /* <header> nav, ul, and li styles */
 header nav ul li a {
-    padding: 5px;
     font-size: 25px;
     font-weight: bold;
-    color: var(--secondary-color);
-    background: linear-gradient(to top, var(--secondary-color) 50%, var(--header-color) 50%);
-    background-size: 100% 200%;
-    background-position: top left;
-    transition: all .2s ease-out;
     margin: 5px;
-    position: relative;
     border-bottom: 3px solid var(--secondary-color);
-}
-
-header nav ul a:hover {
-    color: var(--header-color);
-    background-position: bottom-left;
-}
+} 
 
 
 .hero {
@@ -103,10 +103,11 @@ header nav ul a:hover {
 .subtitle {
     position: absolute;
     top: 85%;
-    left: 80%;
+    left: 82%;
     padding: 5px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    display: flex;
 }
 
 section {
@@ -172,14 +173,16 @@ h2 {
     line-height: 1.25;
 }
 
-.flex-container {
-    flex: 1;
-}
-
 img {
-    border: solid 10px;
+    border: solid 10px var(--secondary-color);
     margin: 1%;
     opacity: 0.85;
+}
+
+.projects img:hover {
+    box-shadow: 0 0 50px 0 var(--secondary-color);
+    transform: scale(1.01);
+    opacity: 3;
 }
 
 #work {
@@ -187,21 +190,78 @@ img {
     justify-content: space-between;
 }
 
-.run-buddy {
-    flex: 1;
+.main-project {
+    position: relative;
 }
 
-.main-work img {
-    flex: 1;
-    justify-content: flex-start;
-    width: 50%;
+.main-project img {
+    margin: 1%;
+    height: 85%;
+    width: 98%;
+}
+
+h3 {
+    
+}
+
+.run-buddy-text {
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    background: var(--secondary-color);
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 2%;
+    color: var(--primary-color);
+    text-align: right;
+}
+
+.other-projects {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    height: 45%;
+}
+
+.project-text {
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    background: var(--secondary-color);
+    padding: 1%;
+    padding-left: 8%;
+    padding-right: 2%;
+    color: var(--primary-color);
+    text-align: right;
+}
+
+.project-text p {
+    color: var(--primary-color);
+    font-size: 10px;
+    padding-top: 3%;
 }
 
 .other-work {
-    flex: 1;
+    height: 100%;
+    width: 47%;
 }
 
 .horiseon img {
     width: 640px;
     height: 480px;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid var(--secondary-color);
+    padding: 10px;
+}
+
+.contact-info {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
