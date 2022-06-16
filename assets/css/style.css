@@ -1,3 +1,4 @@
+/* color var */
 :root {
     --background-color: whitesmoke;
     --header-color: #e8f6dd;
@@ -14,21 +15,19 @@
 
 }
 
-/* apply styles to <body> */
+/* page background color */
 body {
     background-color: var(--background-color);
 }
 
 /* <header> STYLES START */
 header {
+    width:100%;
     background-color: var(--header-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 0;
-    z-index: 9999;
-    margin: 0;
-    padding: 15px 0 15px 0;
+    padding: 20px 0 20px 0;
     align-items: center;
 }
 
@@ -56,12 +55,13 @@ header a {
     background-image: linear-gradient(to top, transparent 50%, var(--secondary-color) 50%);
 }
 
+/* header links hover style */
 header a:hover {
     color: var(--primary-color);
     background-position: 0 0;
 }
 
-/* <header> nav styles */
+/* <header> nav-bar styles */
 header nav {
     margin: 7px 0;
     padding-right: 80px;
@@ -81,7 +81,7 @@ header nav ul li a {
     margin: 5px;
     border-bottom: 3px solid var(--secondary-color);
 } 
-
+/* END HEADER STYLES */
 
 .hero {
     background-image: url(../images/hero.jpg);
@@ -89,7 +89,6 @@ header nav ul li a {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    align-items: flex-start;
     height: 300px;
     margin-bottom: 25px;
     background-position: bottom;
@@ -97,7 +96,9 @@ header nav ul li a {
 }
 
 .hero img {
-    size: 50%;
+    position: absolute;
+    left: 180px;
+    top: 50px;
 }
 
 .subtitle {
@@ -110,98 +111,62 @@ header nav ul li a {
     display: flex;
 }
 
-section {
-    padding: 4%;
-}
-
-/* .contents {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 70%;
+main {
     display: flex;
     flex-wrap: wrap;
 }
 
-.contents h2 {
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 20px;
+    color: var(--secondary-color);
+}
+
+.main-title {
     flex: 0 0 20%;
+    border-right: 5px solid var(--secondary-color);
+    font-size: 30px;
     text-align: right;
-    padding-right: 17px;
-    color: var(--secondary-color);
-    font-size: 40px;
-    border-right: 3px solid var(--secondary-color);
-    line-height: 1.1;
-    margin-right: 35px;
+    margin-right: 40px;
+    padding-right: 25px;
 }
 
-.contents ul {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-} */
-
-#about {
-    display: flex;
+.about-text {
+    flex: 0 1 90%;
+    padding-left: 3%;
+    padding-right: 1%;
+    font-size: 20px;
 }
 
-h2 {
-    width: 175px;
-}
-
-.sub-header {
+.projects {
     display: flex;
     flex-wrap: wrap;
-    color: var(--secondary-color);
-    padding: 3%;
-    border-right: 5px solid var(--secondary-color);
-    text-align: right;
+    justify-content: space-between;
 }
 
-.content-text, .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3%;
-}
-
-.content-text p {
-    padding: 1%;
-    color: var(--secondary-color);
-    text-align: justify;
-    line-height: 1.25;
-}
-
-img {
+.projects img {
+    max-width: 100%;
     border: solid 10px var(--secondary-color);
-    margin: 1%;
-    opacity: 0.85;
+    flex: 1;
+    opacity: 0.75;
+    transition: opacity .3s ease-out;
 }
 
 .projects img:hover {
     box-shadow: 0 0 50px 0 var(--secondary-color);
-    transform: scale(1.01);
-    opacity: 3;
+    opacity: 1;
 }
 
-#work {
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-.main-project {
-    position: relative;
-}
-
-.main-project img {
-    margin: 1%;
-    height: 85%;
-    width: 98%;
-}
-
-h3 {
-    
+.first-project {
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    padding: 0;
 }
 
 .run-buddy-text {
@@ -242,20 +207,9 @@ h3 {
     padding-top: 3%;
 }
 
-.other-work {
-    height: 100%;
-    width: 47%;
-}
-
-.horiseon img {
-    width: 640px;
-    height: 480px;
-}
-
 #contact {
     display: flex;
     justify-content: space-between;
-    border-bottom: 4px solid var(--secondary-color);
     padding: 10px;
 }
 
