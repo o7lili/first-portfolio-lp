@@ -136,10 +136,14 @@ content {
     line-height: 1.1;
 }
 
+.title-panel > h2 {
+    flex: 0 0 20%
+}
+
 
 /* about SECTION STYLES START */
 .about {
-    display: flex;
+    /* display: flex; */
     border: left;
     width: 100%;
     flex: 1 1 100%;
@@ -162,7 +166,7 @@ content {
 
 /* work SECTION STYLES START */
 .work {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     border: left;
     width:100%;
@@ -197,7 +201,7 @@ content {
     color: var(--primary-color);
     padding: 5px;
     flex-wrap: wrap;
-    max-width: 170px;
+    max-width: 200px;
     flex: none;
 }
 
