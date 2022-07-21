@@ -205,12 +205,6 @@ content {
     flex: none;
 }
 
-/* .other-projects {
-    display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
-} */
-
 .projects-flex {
     flex: 1 - 30%;
     width: 100%;
